@@ -20,9 +20,9 @@ cargo run
 
 # Routes
 
-### Create an user
+### Create a user
 
-Route -> `/user`
+Route -> `/user` \
 Method -> POST
 
 Body
@@ -37,20 +37,30 @@ Body
 
 ### Get a user
 
-Route -> `/user/<id>`
+Route -> `/user/<id>` \
 Method -> GET
 
 ### Update a user
 
-Route -> `/user/<id>`
+Route -> `/user/<id>` \
 Method -> PUT
+
+Body
+
+```json
+{
+  "name": "Edited name",
+  "location": "New street #456",
+  "title": "This is a new title"
+}
+```
 
 ### Delete a user
 
-Route -> `/user/<id>`
+Route -> `/user/<id>` \
 Method -> DELETE
 
 ### Get all users
 
-Route -> `/users`
+Route -> `/users` \
 Method -> GET
