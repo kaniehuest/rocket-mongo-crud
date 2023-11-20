@@ -88,4 +88,15 @@ impl MongoRepo {
 
     Ok(user_detail)
   }
+
+  pub fn get_all_users(&self) -> Result<Vec<User>, Error> {
+    let cursor = self
+      .col
+      .find(None, None)
+      .ok()
+      .expect("Error getting list of users");
+    let users = cursor.map(|doc| doc.unwrap()).collect();
+
+    Ok(users)
+  }
 }
